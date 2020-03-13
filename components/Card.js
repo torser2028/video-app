@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View, Text, TouchableHighlight, StyleSheet } from 'react-native';
+import { Image, View, Text, TouchableHighlight, StyleSheet, Linking } from 'react-native';
 import PropTypes from 'prop-types';
 
 const Card = ({ title, image, description, url }) => {
@@ -7,7 +7,7 @@ const Card = ({ title, image, description, url }) => {
     uri: image
   };
   const onPressButton = () => {
-
+    Linking.openURL(url);
   };
   return (
     <View style={styles.container}>
